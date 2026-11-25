@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>monaco-json-studio-preview — Docs</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./index.html"><span>Monaco JSON Studio</span><span class="badge">Preview</span></a>
+    <nav class="nav">
+      <a href="./index.html">Overview</a>
+      <a href="./single.html">Single</a>
+      <a class="active" href="./preview.html">Preview</a>
+      <a href="./double.html">Double</a>
+      <a href="./triple.html">Triple</a>
+      <a href="https://keshavsoft.github.io/monaco-json-studio-base-docs/">Base Docs ↗</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <h1>monaco-json-studio-preview</h1>
+      <p>Clean Bootstrap 5 DOM target (Tab 2) that receives live JSON from <a style="color:var(--accent-cyan)" href="./single.html">monaco-json-studio-single</a> over <code>BroadcastChannel</code> and compiles it via <code>@keshavsoft/json-to-dom</code>.</p>
+      <div class="pill-links">
+        <a class="btn primary" href="https://keshavsoft.github.io/monaco-json-studio-preview/">Repo Docs</a>
+        <a class="btn" href="https://www.npmjs.com/package/monaco-json-studio-preview">npm Package</a>
+        <a class="btn" href="https://github.com/keshavsoft/monaco-json-studio-preview">GitHub Repo</a>
+      </div>
+    </div>
+
+    <section>
+      <h2>2-Tab Live Workflow</h2>
+      <pre><code>mkdir test-v5 &amp;&amp; cd test-v5
+npx monaco-json-studio-single file-picker cursor --url https://keshavsoft.github.io/declarative-spec/json/v3/spec.json
+npx monaco-json-studio-preview
+npx serve</code></pre>
+      <p>Open <code>/monaco-single-file-picker-cursor/</code> in Tab 1 and <code>/monaco-preview/</code> in Tab 2, then click <strong>Render</strong> in Tab 1.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">KeshavSoft · <a style="color:var(--accent-cyan)" href="./index.html">Back to Studio Overview</a></footer>
+</body>
+</html>
