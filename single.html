@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>monaco-json-studio-single — Docs</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./index.html"><span>Monaco JSON Studio</span><span class="badge">Single</span></a>
+    <nav class="nav">
+      <a href="./index.html">Overview</a>
+      <a href="./base.html">Base</a>
+      <a class="active" href="./single.html">Single</a>
+      <a href="./double.html">Double</a>
+      <a href="./triple.html">Triple</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <h1>monaco-json-studio-single</h1>
+      <p>A dedicated 1-pane studio generator. Because it knows there is only one editor, it places <code>Select File</code> or dataset dropdowns directly inside the top studio header.</p>
+      <div class="pill-links">
+        <a class="btn primary" href="https://www.npmjs.com/package/monaco-json-studio-single">View on npm</a>
+        <a class="btn" href="https://github.com/keshavsoft/monaco-json-studio-single">GitHub Repo</a>
+        <a class="btn" href="https://keshavsoft.github.io/monaco-json-studio-single/">Repo Docs</a>
+      </div>
+    </div>
+
+    <section>
+      <h2>Why This Repo Exists</h2>
+      <p>In a 1-pane layout, stacking a separate pane header directly underneath the main studio bar wastes vertical space. <code>monaco-json-studio-single</code> eliminates the extra bar by moving header controls up into <code>.studio-header</code> and removing pane-count flags entirely.</p>
+    </section>
+
+    <section>
+      <h2>CLI Usage</h2>
+      <pre><code>npx monaco-json-studio-single
+npx monaco-json-studio-single file-picker cursor
+npx monaco-json-studio-single select note
+npx monaco-json-studio-single title none</code></pre>
+      <p>Outputs to <code>./monaco-single-&lt;header&gt;-&lt;footer&gt;</code> (and appends <code>-1</code>, <code>-2</code>, … if the directory already exists).</p>
+    </section>
+
+    <section>
+      <h2>Programmatic API</h2>
+      <pre><code>import { createSingleStudio } from 'monaco-json-studio-single';
+
+createSingleStudio({ header: 'file-picker', footer: 'cursor' });</code></pre>
+    </section>
+  </main>
+
+  <footer class="site-footer">KeshavSoft · <a style="color:var(--accent-cyan)" href="./index.html">Back to Overview</a></footer>
+</body>
+</html>

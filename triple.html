@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>monaco-json-studio-triple — Docs</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./index.html"><span>Monaco JSON Studio</span><span class="badge">Triple</span></a>
+    <nav class="nav">
+      <a href="./index.html">Overview</a>
+      <a href="./base.html">Base</a>
+      <a href="./single.html">Single</a>
+      <a href="./double.html">Double</a>
+      <a class="active" href="./triple.html">Triple</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <h1>monaco-json-studio-triple</h1>
+      <p>A dedicated 3-pane static Monaco JSON Studio built for Input → Spec/Rules → Output workflows.</p>
+      <div class="pill-links">
+        <a class="btn primary" href="https://www.npmjs.com/package/monaco-json-studio-triple">View on npm</a>
+        <a class="btn" href="https://github.com/keshavsoft/monaco-json-studio-triple">GitHub Repo</a>
+        <a class="btn" href="https://keshavsoft.github.io/monaco-json-studio-triple/">Repo Docs</a>
+      </div>
+    </div>
+
+    <section>
+      <h2>Why This Repo Exists</h2>
+      <p>Three-pane tools (like source JSON + transformation rules + generated output) have distinct defaults per column. Isolating Triple into its own package keeps the CLI direct and lets each pane declare its own <code>header:footer</code> pair.</p>
+    </section>
+
+    <section>
+      <h2>CLI Usage</h2>
+      <pre><code>npx monaco-json-studio-triple
+npx monaco-json-studio-triple file-picker:cursor select:cursor title:note
+npx monaco-json-studio-triple file-picker:cursor</code></pre>
+      <p>Outputs to <code>./monaco-triple-&lt;pane1&gt;_&lt;pane2&gt;_&lt;pane3&gt;</code> with automatic non-overwriting folder suffixes.</p>
+    </section>
+
+    <section>
+      <h2>Programmatic API</h2>
+      <pre><code>import { createTripleStudio } from 'monaco-json-studio-triple';
+
+createTripleStudio({
+  pane1: 'file-picker:cursor',
+  pane2: 'file-picker:cursor',
+  pane3: 'title:note'
+});</code></pre>
+    </section>
+  </main>
+
+  <footer class="site-footer">KeshavSoft · <a style="color:var(--accent-cyan)" href="./index.html">Back to Overview</a></footer>
+</body>
+</html>

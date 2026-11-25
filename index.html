@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Monaco JSON Studio — Architecture &amp; Story</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./index.html">
+      <span>Monaco JSON Studio</span>
+      <span class="badge">Story</span>
+    </a>
+    <nav class="nav">
+      <a class="active" href="./index.html">Overview</a>
+      <a href="./base.html">Base</a>
+      <a href="./single.html">Single</a>
+      <a href="./double.html">Double</a>
+      <a href="./triple.html">Triple</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <h1>Why 4 Focused Packages Beat One Monolith</h1>
+      <p>
+        Monaco JSON Studio started as a single CLI taking <code>1</code>, <code>2</code>, or <code>3</code>.
+        As soon as each layout needed its own ergonomics—top-bar file picking for 1 pane, side-by-side independent
+        headers for 2 panes, and pipeline layouts for 3 panes—splitting into one shared primitive and three focused
+        packages made every CLI and codebase dramatically simpler.
+      </p>
+    </div>
+
+    <section>
+      <h2>The 4-Repo Suite</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>monaco-json-studio-base</h3>
+          <p>Zero-dependency core generator, region builders (<code>header/</code>, <code>body/</code>, <code>footer/</code>), and browser Monaco runtime.</p>
+          <div class="card-links">
+            <a href="./base.html">Story &amp; Docs</a>
+            <a href="https://www.npmjs.com/package/monaco-json-studio-base">npm</a>
+            <a href="https://github.com/keshavsoft/monaco-json-studio-base">GitHub</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>monaco-json-studio-single</h3>
+          <p>1-pane studio with top-bar <code>Select File</code> / dataset picker so no vertical space is wasted on stacked headers.</p>
+          <div class="card-links">
+            <a href="./single.html">Story &amp; Docs</a>
+            <a href="https://www.npmjs.com/package/monaco-json-studio-single">npm</a>
+            <a href="https://github.com/keshavsoft/monaco-json-studio-single">GitHub</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>monaco-json-studio-double</h3>
+          <p>2-pane side-by-side studio where each pane owns an independent header and footer.</p>
+          <div class="card-links">
+            <a href="./double.html">Story &amp; Docs</a>
+            <a href="https://www.npmjs.com/package/monaco-json-studio-double">npm</a>
+            <a href="https://github.com/keshavsoft/monaco-json-studio-double">GitHub</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>monaco-json-studio-triple</h3>
+          <p>3-pane workflow studio built for Input → Spec → Output pipelines.</p>
+          <div class="card-links">
+            <a href="./triple.html">Story &amp; Docs</a>
+            <a href="https://www.npmjs.com/package/monaco-json-studio-triple">npm</a>
+            <a href="https://github.com/keshavsoft/monaco-json-studio-triple">GitHub</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Design Principles Shared Across All 4 Repos</h2>
+      <ul>
+        <li><strong><code>src/v1/</code> Versioning Discipline</strong>: Every package exposes a thin <code>src/index.js</code> gateway over <code>src/v1/index.js</code>.</li>
+        <li><strong>Region-First Organization</strong>: <code>base</code> organizes both generator and browser code into <code>header/</code>, <code>body/</code>, and <code>footer/</code>.</li>
+        <li><strong>Declarative DOM Bindings</strong>: Browser interactions use <code>dom-primitive-bindings</code> (<code>bindings.json</code> + <code>actions.js</code>) via container delegation.</li>
+        <li><strong>Non-Overwriting Output</strong>: Repeated CLI runs auto-increment (<code>-1</code>, <code>-2</code>, …) so existing studios stay intact.</li>
+      </ul>
+      <pre><code>monaco-json-studio-base (header / body / footer + Monaco + dom-primitive-bindings)
+   ├── monaco-json-studio-single  → 1 pane  (top-bar controls)
+   ├── monaco-json-studio-double  → 2 panes (independent per-pane headers &amp; footers)
+   └── monaco-json-studio-triple  → 3 panes (3-column pipeline studio)</code></pre>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    KeshavSoft · Static documentation site for the Monaco JSON Studio suite
+  </footer>
+</body>
+</html>

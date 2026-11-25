@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>monaco-json-studio-double — Docs</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./index.html"><span>Monaco JSON Studio</span><span class="badge">Double</span></a>
+    <nav class="nav">
+      <a href="./index.html">Overview</a>
+      <a href="./base.html">Base</a>
+      <a href="./single.html">Single</a>
+      <a class="active" href="./double.html">Double</a>
+      <a href="./triple.html">Triple</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <h1>monaco-json-studio-double</h1>
+      <p>A dedicated 2-pane side-by-side Monaco JSON Studio where Pane 1 and Pane 2 each have independent headers and footers.</p>
+      <div class="pill-links">
+        <a class="btn primary" href="https://www.npmjs.com/package/monaco-json-studio-double">View on npm</a>
+        <a class="btn" href="https://github.com/keshavsoft/monaco-json-studio-double">GitHub Repo</a>
+        <a class="btn" href="https://keshavsoft.github.io/monaco-json-studio-double/">Repo Docs</a>
+      </div>
+    </div>
+
+    <section>
+      <h2>Why This Repo Exists</h2>
+      <p>When comparing two JSON payloads—or pairing an input file with a transformed output—each pane needs its own header controls and status footer while the global studio bar stays fixed.</p>
+    </section>
+
+    <section>
+      <h2>CLI Usage</h2>
+      <pre><code>npx monaco-json-studio-double
+npx monaco-json-studio-double file-picker:cursor select:note
+npx monaco-json-studio-double title:none</code></pre>
+      <p>Outputs to <code>./monaco-double-&lt;pane1&gt;_&lt;pane2&gt;</code> with automatic non-overwriting folder suffixes.</p>
+    </section>
+
+    <section>
+      <h2>Programmatic API</h2>
+      <pre><code>import { createDoubleStudio } from 'monaco-json-studio-double';
+
+createDoubleStudio({ pane1: 'file-picker:cursor', pane2: 'select:note' });</code></pre>
+    </section>
+  </main>
+
+  <footer class="site-footer">KeshavSoft · <a style="color:var(--accent-cyan)" href="./index.html">Back to Overview</a></footer>
+</body>
+</html>
