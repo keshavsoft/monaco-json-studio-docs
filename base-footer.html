@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>monaco-json-studio-base-footer — Docs</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./index.html"><span>Monaco JSON Studio</span><span class="badge">Footer</span></a>
+    <nav class="nav">
+      <a href="./index.html">Overview</a>
+      <a href="./base-header.html">Header</a>
+      <a href="./base-body.html">Body</a>
+      <a class="active" href="./base-footer.html">Footer</a>
+      <a href="./single.html">Single</a>
+      <a href="./double.html">Double</a>
+      <a href="./triple.html">Triple</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <h1>monaco-json-studio-base-footer</h1>
+      <p>Handlebars (<code>.hbs</code>) footer components (<code>cursor.hbs</code>, <code>note.hbs</code>, <code>status.hbs</code>, <code>stats.hbs</code>) paired with live cursor and JSON stats updaters.</p>
+      <div class="pill-links">
+        <a class="btn primary" href="https://www.npmjs.com/package/monaco-json-studio-base-footer">npm Package</a>
+        <a class="btn" href="https://github.com/keshavsoft/monaco-json-studio-base-footer">GitHub Repo</a>
+        <a class="btn" href="https://keshavsoft.github.io/monaco-json-studio-base-footer/">Repo Docs</a>
+      </div>
+    </div>
+
+    <section>
+      <h2>Why This Repo Exists</h2>
+      <p>Footers display live editor feedback (cursor <code>Ln/Col</code>, JSON validity, line/character counts, and status notes) cleanly separated from <a href="./base-header.html">Header</a> and <a href="./base-body.html">Body</a>.</p>
+    </section>
+
+    <section>
+      <h2>CLI &amp; API</h2>
+      <pre><code>npx monaco-json-studio-base-footer cursor
+npx monaco-json-studio-base-footer stats
+npx monaco-json-studio-base-footer status --html</code></pre>
+      <pre><code>import { renderFooter } from 'monaco-json-studio-base-footer';
+const html = renderFooter({ type: 'stats', lines: 12, chars: 240 });</code></pre>
+    </section>
+  </main>
+
+  <footer class="site-footer">KeshavSoft · <a style="color:var(--accent-cyan)" href="./index.html">Back to Overview</a></footer>
+</body>
+</html>
