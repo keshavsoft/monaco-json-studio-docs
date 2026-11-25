@@ -11,43 +11,35 @@
     <a class="brand" href="./index.html"><span>Monaco JSON Studio</span><span class="badge">Double</span></a>
     <nav class="nav">
       <a href="./index.html">Overview</a>
-      <a href="./base-header.html">Header</a>
-      <a href="./base-body.html">Body</a>
-      <a href="./base-footer.html">Footer</a>
       <a href="./single.html">Single</a>
       <a class="active" href="./double.html">Double</a>
       <a href="./triple.html">Triple</a>
+      <a href="https://keshavsoft.github.io/monaco-json-studio-base-docs/">Base Docs ↗</a>
     </nav>
   </header>
 
   <main class="container">
     <div class="hero">
       <h1>monaco-json-studio-double</h1>
-      <p>2-pane studio directly composing <a href="./base-header.html">base-header</a> + <a href="./base-body.html">base-body</a> (<code>double</code>) + <a href="./base-footer.html">base-footer</a>, with active-pane tracking so top-bar actions target whichever editor is focused.</p>
+      <p>2-pane studio directly composing <a style="color:var(--accent-cyan)" href="https://keshavsoft.github.io/monaco-json-studio-base-docs/base-header.html">base-header</a> + <a style="color:var(--accent-cyan)" href="https://keshavsoft.github.io/monaco-json-studio-base-docs/base-body.html">base-body</a> (<code>double</code>) + <a style="color:var(--accent-cyan)" href="https://keshavsoft.github.io/monaco-json-studio-base-docs/base-footer.html">base-footer</a> with active-pane focus tracking.</p>
       <div class="pill-links">
-        <a class="btn primary" href="https://www.npmjs.com/package/monaco-json-studio-double">View on npm</a>
+        <a class="btn primary" href="https://keshavsoft.github.io/monaco-json-studio-double/">Repo Docs</a>
+        <a class="btn" href="https://www.npmjs.com/package/monaco-json-studio-double">npm Package</a>
         <a class="btn" href="https://github.com/keshavsoft/monaco-json-studio-double">GitHub Repo</a>
-        <a class="btn" href="https://keshavsoft.github.io/monaco-json-studio-double/">Repo Docs</a>
       </div>
     </div>
 
     <section>
-      <h2>CLI Usage</h2>
-      <pre><code>npx monaco-json-studio-double
-npx monaco-json-studio-double file-picker status
-npx monaco-json-studio-double select stats
-npx monaco-json-studio-double actions cursor</code></pre>
-      <p>Outputs to <code>./monaco-double-&lt;header&gt;-&lt;footer&gt;</code> with automatic non-overwriting folder suffixes.</p>
-    </section>
-
-    <section>
-      <h2>Programmatic API</h2>
-      <pre><code>import { createDoubleStudio } from 'monaco-json-studio-double';
-
-createDoubleStudio({ header: 'file-picker', footer: 'status' });</code></pre>
+      <h2>Modular Repo Docs</h2>
+      <ul>
+        <li><a style="color:var(--accent-cyan)" href="https://keshavsoft.github.io/monaco-json-studio-double/story.html">Story</a> — Side-by-side 2-pane studio under one shared header &amp; footer</li>
+        <li><a style="color:var(--accent-cyan)" href="https://keshavsoft.github.io/monaco-json-studio-double/npx-usage.html">npx Usage</a> — CLI presets and non-overwriting output folders</li>
+        <li><a style="color:var(--accent-cyan)" href="https://keshavsoft.github.io/monaco-json-studio-double/npm-usage.html">npm Usage</a> — Programmatic <code>createDoubleStudio()</code> API</li>
+        <li><a style="color:var(--accent-cyan)" href="https://keshavsoft.github.io/monaco-json-studio-double/dependencies.html">Dependencies</a> — <code>handlebars</code> and the 3 Base packages</li>
+      </ul>
     </section>
   </main>
 
-  <footer class="site-footer">KeshavSoft · <a style="color:var(--accent-cyan)" href="./index.html">Back to Overview</a></footer>
+  <footer class="site-footer">KeshavSoft · <a style="color:var(--accent-cyan)" href="./index.html">Back to Studio Overview</a></footer>
 </body>
 </html>

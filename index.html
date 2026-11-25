@@ -3,77 +3,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Monaco JSON Studio — Architecture &amp; Story</title>
+  <title>Monaco JSON Studio — Docs</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="./index.html">
       <span>Monaco JSON Studio</span>
-      <span class="badge">Story</span>
+      <span class="badge">Studios</span>
     </a>
     <nav class="nav">
       <a class="active" href="./index.html">Overview</a>
-      <a href="./base-header.html">Header</a>
-      <a href="./base-body.html">Body</a>
-      <a href="./base-footer.html">Footer</a>
       <a href="./single.html">Single</a>
       <a href="./double.html">Double</a>
       <a href="./triple.html">Triple</a>
+      <a href="https://keshavsoft.github.io/monaco-json-studio-base-docs/">Base Docs ↗</a>
     </nav>
   </header>
 
   <main class="container">
     <div class="hero">
-      <h1>Composable HTML Building Blocks for Monaco Studios</h1>
+      <h1>1-, 2-, and 3-Pane Static Monaco JSON Studios</h1>
       <p>
-        Rather than hiding hardcoded HTML inside one monolithic generator, the Monaco JSON Studio suite separates
-        every page into three <code>.hbs</code>-driven region primitives (<strong>Header</strong>, <strong>Body</strong>,
-        <strong>Footer</strong>) composed directly by <strong>Single</strong>, <strong>Double</strong>, and <strong>Triple</strong>.
+        Each Studio package focuses on one layout—<strong>Single</strong>, <strong>Double</strong>, or <strong>Triple</strong>—and
+        assembles its HTML directly from the three <a href="https://keshavsoft.github.io/monaco-json-studio-base-docs/">Base Region Primitives</a>
+        using a clean <code>document.hbs</code> shell.
       </p>
     </div>
 
     <section>
-      <h2>Tier 1: Region Primitives (<code>.hbs</code> + Runtime)</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>monaco-json-studio-base-header</h3>
-          <p><code>title</code>, <code>file-picker</code>, <code>select</code>, and <code>actions</code> headers built with Handlebars &amp; <code>dom-primitive-bindings</code>.</p>
-          <div class="card-links">
-            <a href="./base-header.html">Docs</a>
-            <a href="https://www.npmjs.com/package/monaco-json-studio-base-header">npm</a>
-            <a href="https://github.com/keshavsoft/monaco-json-studio-base-header">GitHub</a>
-          </div>
-        </article>
-        <article class="card">
-          <h3>monaco-json-studio-base-body</h3>
-          <p><code>single</code>, <code>double</code>, and <code>triple</code> workspace <code>.hbs</code> layouts with Monaco mounting helpers.</p>
-          <div class="card-links">
-            <a href="./base-body.html">Docs</a>
-            <a href="https://www.npmjs.com/package/monaco-json-studio-base-body">npm</a>
-            <a href="https://github.com/keshavsoft/monaco-json-studio-base-body">GitHub</a>
-          </div>
-        </article>
-        <article class="card">
-          <h3>monaco-json-studio-base-footer</h3>
-          <p><code>cursor</code>, <code>note</code>, <code>status</code>, and <code>stats</code> footers with live cursor &amp; JSON validation updaters.</p>
-          <div class="card-links">
-            <a href="./base-footer.html">Docs</a>
-            <a href="https://www.npmjs.com/package/monaco-json-studio-base-footer">npm</a>
-            <a href="https://github.com/keshavsoft/monaco-json-studio-base-footer">GitHub</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section>
-      <h2>Tier 2: Composed Studios (<code>v2</code>)</h2>
+      <h2>The 3 Studio Packages</h2>
       <div class="grid">
         <article class="card">
           <h3>monaco-json-studio-single</h3>
           <p>1-pane studio combining <code>base-header</code> + <code>base-body</code> (<code>single</code>) + <code>base-footer</code>.</p>
           <div class="card-links">
-            <a href="./single.html">Docs</a>
+            <a href="./single.html">Overview</a>
+            <a href="https://keshavsoft.github.io/monaco-json-studio-single/">Repo Docs</a>
             <a href="https://www.npmjs.com/package/monaco-json-studio-single">npm</a>
             <a href="https://github.com/keshavsoft/monaco-json-studio-single">GitHub</a>
           </div>
@@ -82,7 +48,8 @@
           <h3>monaco-json-studio-double</h3>
           <p>2-pane studio combining <code>base-header</code> + <code>base-body</code> (<code>double</code>) + <code>base-footer</code>.</p>
           <div class="card-links">
-            <a href="./double.html">Docs</a>
+            <a href="./double.html">Overview</a>
+            <a href="https://keshavsoft.github.io/monaco-json-studio-double/">Repo Docs</a>
             <a href="https://www.npmjs.com/package/monaco-json-studio-double">npm</a>
             <a href="https://github.com/keshavsoft/monaco-json-studio-double">GitHub</a>
           </div>
@@ -91,7 +58,8 @@
           <h3>monaco-json-studio-triple</h3>
           <p>3-pane studio combining <code>base-header</code> + <code>base-body</code> (<code>triple</code>) + <code>base-footer</code>.</p>
           <div class="card-links">
-            <a href="./triple.html">Docs</a>
+            <a href="./triple.html">Overview</a>
+            <a href="https://keshavsoft.github.io/monaco-json-studio-triple/">Repo Docs</a>
             <a href="https://www.npmjs.com/package/monaco-json-studio-triple">npm</a>
             <a href="https://github.com/keshavsoft/monaco-json-studio-triple">GitHub</a>
           </div>
@@ -100,16 +68,17 @@
     </section>
 
     <section>
-      <h2>Architecture Diagram</h2>
-      <pre><code>monaco-json-studio-base-header (.hbs + dom-primitive-bindings) ─┐
-monaco-json-studio-base-body   (.hbs 1/2/3 panes + Monaco)      ─┼─► single / double / triple (v2)
-monaco-json-studio-base-footer (.hbs + cursor/stats updaters)   ─┘</code></pre>
-      <p>Looking for the earlier <code>v1</code> prototype? See <a href="./base.html">monaco-json-studio-base (v1)</a>.</p>
+      <h2>How Studios Compose Base Regions</h2>
+      <pre><code>Single / Double / Triple (document.hbs + active-pane runtime)
+   ├── monaco-json-studio-base-header
+   ├── monaco-json-studio-base-body
+   └── monaco-json-studio-base-footer</code></pre>
+      <p>To explore or extend the underlying <code>.hbs</code> regions, visit <a href="https://keshavsoft.github.io/monaco-json-studio-base-docs/">Monaco JSON Studio Base Docs</a>.</p>
     </section>
   </main>
 
   <footer class="site-footer">
-    KeshavSoft · Static documentation site for the Monaco JSON Studio suite
+    KeshavSoft · Documentation for the Monaco JSON Studio suite
   </footer>
 </body>
 </html>

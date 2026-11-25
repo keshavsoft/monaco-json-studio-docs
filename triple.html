@@ -11,43 +11,35 @@
     <a class="brand" href="./index.html"><span>Monaco JSON Studio</span><span class="badge">Triple</span></a>
     <nav class="nav">
       <a href="./index.html">Overview</a>
-      <a href="./base-header.html">Header</a>
-      <a href="./base-body.html">Body</a>
-      <a href="./base-footer.html">Footer</a>
       <a href="./single.html">Single</a>
       <a href="./double.html">Double</a>
       <a class="active" href="./triple.html">Triple</a>
+      <a href="https://keshavsoft.github.io/monaco-json-studio-base-docs/">Base Docs ↗</a>
     </nav>
   </header>
 
   <main class="container">
     <div class="hero">
       <h1>monaco-json-studio-triple</h1>
-      <p>3-pane studio directly composing <a href="./base-header.html">base-header</a> + <a href="./base-body.html">base-body</a> (<code>triple</code>) + <a href="./base-footer.html">base-footer</a> for Input → Spec → Output workflows under one shared header and footer.</p>
+      <p>3-pane studio directly composing <a style="color:var(--accent-cyan)" href="https://keshavsoft.github.io/monaco-json-studio-base-docs/base-header.html">base-header</a> + <a style="color:var(--accent-cyan)" href="https://keshavsoft.github.io/monaco-json-studio-base-docs/base-body.html">base-body</a> (<code>triple</code>) + <a style="color:var(--accent-cyan)" href="https://keshavsoft.github.io/monaco-json-studio-base-docs/base-footer.html">base-footer</a> for Input → Spec → Output workflows.</p>
       <div class="pill-links">
-        <a class="btn primary" href="https://www.npmjs.com/package/monaco-json-studio-triple">View on npm</a>
+        <a class="btn primary" href="https://keshavsoft.github.io/monaco-json-studio-triple/">Repo Docs</a>
+        <a class="btn" href="https://www.npmjs.com/package/monaco-json-studio-triple">npm Package</a>
         <a class="btn" href="https://github.com/keshavsoft/monaco-json-studio-triple">GitHub Repo</a>
-        <a class="btn" href="https://keshavsoft.github.io/monaco-json-studio-triple/">Repo Docs</a>
       </div>
     </div>
 
     <section>
-      <h2>CLI Usage</h2>
-      <pre><code>npx monaco-json-studio-triple
-npx monaco-json-studio-triple file-picker status
-npx monaco-json-studio-triple select stats
-npx monaco-json-studio-triple actions cursor</code></pre>
-      <p>Outputs to <code>./monaco-triple-&lt;header&gt;-&lt;footer&gt;</code> with automatic non-overwriting folder suffixes.</p>
-    </section>
-
-    <section>
-      <h2>Programmatic API</h2>
-      <pre><code>import { createTripleStudio } from 'monaco-json-studio-triple';
-
-createTripleStudio({ header: 'actions', footer: 'status' });</code></pre>
+      <h2>Modular Repo Docs</h2>
+      <ul>
+        <li><a style="color:var(--accent-cyan)" href="https://keshavsoft.github.io/monaco-json-studio-triple/story.html">Story</a> — 3-pane pipeline workspace under one shared header &amp; footer</li>
+        <li><a style="color:var(--accent-cyan)" href="https://keshavsoft.github.io/monaco-json-studio-triple/npx-usage.html">npx Usage</a> — CLI presets and non-overwriting output folders</li>
+        <li><a style="color:var(--accent-cyan)" href="https://keshavsoft.github.io/monaco-json-studio-triple/npm-usage.html">npm Usage</a> — Programmatic <code>createTripleStudio()</code> API</li>
+        <li><a style="color:var(--accent-cyan)" href="https://keshavsoft.github.io/monaco-json-studio-triple/dependencies.html">Dependencies</a> — <code>handlebars</code> and the 3 Base packages</li>
+      </ul>
     </section>
   </main>
 
-  <footer class="site-footer">KeshavSoft · <a style="color:var(--accent-cyan)" href="./index.html">Back to Overview</a></footer>
+  <footer class="site-footer">KeshavSoft · <a style="color:var(--accent-cyan)" href="./index.html">Back to Studio Overview</a></footer>
 </body>
 </html>

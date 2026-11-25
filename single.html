@@ -11,43 +11,35 @@
     <a class="brand" href="./index.html"><span>Monaco JSON Studio</span><span class="badge">Single</span></a>
     <nav class="nav">
       <a href="./index.html">Overview</a>
-      <a href="./base-header.html">Header</a>
-      <a href="./base-body.html">Body</a>
-      <a href="./base-footer.html">Footer</a>
       <a class="active" href="./single.html">Single</a>
       <a href="./double.html">Double</a>
       <a href="./triple.html">Triple</a>
+      <a href="https://keshavsoft.github.io/monaco-json-studio-base-docs/">Base Docs ↗</a>
     </nav>
   </header>
 
   <main class="container">
     <div class="hero">
       <h1>monaco-json-studio-single</h1>
-      <p>1-pane studio directly composing <a href="./base-header.html">base-header</a> + <a href="./base-body.html">base-body</a> (<code>single</code>) + <a href="./base-footer.html">base-footer</a> through <code>document.hbs</code>.</p>
+      <p>1-pane studio directly composing <a style="color:var(--accent-cyan)" href="https://keshavsoft.github.io/monaco-json-studio-base-docs/base-header.html">base-header</a> + <a style="color:var(--accent-cyan)" href="https://keshavsoft.github.io/monaco-json-studio-base-docs/base-body.html">base-body</a> (<code>single</code>) + <a style="color:var(--accent-cyan)" href="https://keshavsoft.github.io/monaco-json-studio-base-docs/base-footer.html">base-footer</a> through <code>document.hbs</code>.</p>
       <div class="pill-links">
-        <a class="btn primary" href="https://www.npmjs.com/package/monaco-json-studio-single">View on npm</a>
+        <a class="btn primary" href="https://keshavsoft.github.io/monaco-json-studio-single/">Repo Docs</a>
+        <a class="btn" href="https://www.npmjs.com/package/monaco-json-studio-single">npm Package</a>
         <a class="btn" href="https://github.com/keshavsoft/monaco-json-studio-single">GitHub Repo</a>
-        <a class="btn" href="https://keshavsoft.github.io/monaco-json-studio-single/">Repo Docs</a>
       </div>
     </div>
 
     <section>
-      <h2>CLI Usage</h2>
-      <pre><code>npx monaco-json-studio-single
-npx monaco-json-studio-single file-picker cursor
-npx monaco-json-studio-single select stats
-npx monaco-json-studio-single actions status</code></pre>
-      <p>Outputs to <code>./monaco-single-&lt;header&gt;-&lt;footer&gt;</code> (appending <code>-1</code>, <code>-2</code>, … so existing folders are never overwritten).</p>
-    </section>
-
-    <section>
-      <h2>Programmatic API</h2>
-      <pre><code>import { createSingleStudio } from 'monaco-json-studio-single';
-
-createSingleStudio({ header: 'file-picker', footer: 'cursor' });</code></pre>
+      <h2>Modular Repo Docs</h2>
+      <ul>
+        <li><a style="color:var(--accent-cyan)" href="https://keshavsoft.github.io/monaco-json-studio-single/story.html">Story</a> — Why a dedicated 1-pane package eliminates stacked headers</li>
+        <li><a style="color:var(--accent-cyan)" href="https://keshavsoft.github.io/monaco-json-studio-single/npx-usage.html">npx Usage</a> — CLI presets and non-overwriting folder output</li>
+        <li><a style="color:var(--accent-cyan)" href="https://keshavsoft.github.io/monaco-json-studio-single/npm-usage.html">npm Usage</a> — Programmatic <code>createSingleStudio()</code> API</li>
+        <li><a style="color:var(--accent-cyan)" href="https://keshavsoft.github.io/monaco-json-studio-single/dependencies.html">Dependencies</a> — <code>handlebars</code> and the 3 Base packages</li>
+      </ul>
     </section>
   </main>
 
-  <footer class="site-footer">KeshavSoft · <a style="color:var(--accent-cyan)" href="./index.html">Back to Overview</a></footer>
+  <footer class="site-footer">KeshavSoft · <a style="color:var(--accent-cyan)" href="./index.html">Back to Studio Overview</a></footer>
 </body>
 </html>
